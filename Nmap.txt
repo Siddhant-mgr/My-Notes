@@ -1,0 +1,30 @@
+Nmap Documentation
+Docs: https://nmap.org/docs.html
+Common Commands
+bash# Basic scan
+nmap <target>
+
+# Ping scan (host discovery)
+nmap -sn 192.168.1.0/24
+
+# Port scan (specific ports)
+nmap -p 80,443,22 <target>
+
+# Service & version detection
+nmap -sV <target>
+
+# OS detection
+nmap -O <target>
+
+# Full aggressive scan
+nmap -A <target>
+
+# Vulnerability scripts (NSE)
+nmap --script vuln <target>
+
+# Stealth SYN scan
+nmap -sS <target>
+
+# Output to file
+nmap -oN output.txt <target>
+nmap -oX output.xml <target>
