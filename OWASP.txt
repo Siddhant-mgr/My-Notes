@@ -1,0 +1,15 @@
+OWASP
+Website: https://owasp.org
+Testing Guide: https://owasp.org/www-project-web-security-testing-guide/
+OWASP Top 10 (2021)
+#VulnerabilityCWE Reference
+A01 Broken Access Control CWE-284
+A02 Cryptographic Failures CWE-310
+A03 Injection CWE-89,CWE-79
+A04 Insecure Design CWE-209
+A05 Security Misconfiguration CWE-16
+A06 Vulnerable & Outdated Components CWE-1035
+A07 Identification & Auth Failures CWE-287
+A08 Software & Data Integrity Failures CWE-829
+A09 Security Logging & Monitoring Failures CWE-778
+A10 Server-Side Request Forgery (SSRF)CWE-918
