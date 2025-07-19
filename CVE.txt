@@ -1,0 +1,23 @@
+Databases
+Resource	URL		Purpose
+CVE      	cve.mitre.org	Unique IDs for known vulnerabilities
+NVD		nvd.nist.gov	CVE details + CVSS scores
+CWE		we.mitre.org	Weakness categories & root causes
+Exploit-DB	exploit-db.com	Public exploits database
+VulDB		vuldb.com	Vulnerability intelligence database
+Shodan		shodan.io	Internet-exposed device search
+
+CVSS Scoring (Severity Scale)
+Score		Severity
+0.0		None
+0.1 – 3.9	Low
+4.0 – 6.9	Medium
+7.0 – 8.9	High
+9.0 – 10.0	Critical
+
+OWASP ↔ CVE/CWE Mapping
+OWASP			CWE		Example CVE
+Injection		CWE-89		CVE-2023-23397
+Broken Auth		CWE-287		CVE-2021-44228 (Log4Shell)
+SSRF			CWE-918		CVE-2021-21985
+Outdated Components	CWE-1035	CVE-2021-44228
