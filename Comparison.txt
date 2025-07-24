@@ -1,0 +1,57 @@
+
+
+COMPARISON: TCP SYN SCAN vs SERVICE VERSION SCAN
+
+
+Feature                  | TCP SYN Scan (-sS)         | Service Version Scan (-sV)
+Purpose                  | Find open ports            | Identify what runs on ports
+Speed                    | Fast                       | Slower
+Noise Level              | Low / Stealthy             | Higher
+Completes Handshake      | No (half open)             | Yes
+Information Given        | Port open/closed/filtered  | Port + service name + version
+Requires Root/Admin      | Yes                        | No
+Best Used For            | Quick recon                | Deep service enumeration
+Example Command          | nmap -sS target            | nmap -sV target
+Output Example           | 80/tcp open                | 80/tcp open http Apache 2.4.51
+OWASP Relevance          | Finding attack surface     | Outdated components (A06)
+
+
+
+ALL NMAP SCAN TYPES — QUICK REFERENCE
+
+
+Scan Type          | Flag              | Purpose
+
+SYN Stealth        | -sS               | Fast, half-open, less detectable
+TCP Connect        | -sT               | Full connection, no root needed
+UDP Scan           | -sU               | Find UDP services (DNS, SNMP)
+Version Detection  | -sV               | Service name and version
+OS Detection       | -O                | Guess operating system
+Aggressive         | -A                | OS + version + scripts combined
+Vuln Scripts       | --script vuln     | Check for known CVEs
+Ping Scan          | -sn               | Check if host is alive
+
+
+
+SOCIAL ENGINEERING AWARENESS NOTES
+
+
+Attack Type    | How It Works                                  | Defence
+---------------|-----------------------------------------------|---------------------------
+Phishing       | Fake email tricks user into clicking link     | Email filters, awareness
+Pretexting     | Attacker pretends to be someone trusted       | Verify identity first
+Baiting        | Infected USB left hoping someone plugs it in  | Never use unknown USBs
+Tailgating     | Attacker follows someone into restricted area | Badge access, challenge
+Vishing        | Fake phone call pretending to be IT support   | Never give passwords over phone
+
+NOTE: Social engineering bypasses all technical tools.
+OWASP recognises the human layer as critical to security.
+
+
+# SYN Scan (before)
+nmap -sS scanme.nmap.org
+
+# Version Scan (after/compare)
+nmap -sV scanme.nmap.org
+
+
